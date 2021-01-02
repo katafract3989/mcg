@@ -15,6 +15,7 @@
 
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/create', 'HomeController@create')->name('create')->middleware('auth');
 Route::get('/edit/{id}', 'HomeController@edit')->name('edit')->middleware('auth');
 Route::get('/add', 'HomeController@add')->name('add')->middleware('auth');
